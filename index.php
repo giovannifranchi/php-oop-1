@@ -1,11 +1,11 @@
 <?php
 
 class Movie {
-    public $title;
-    public $gener;
-    public $release_year;
+    public string $title;
+    public array $gener;
+    public int $release_year;
 
-    function __construct($title, $release_year, $gener = '')
+    function __construct($title, $release_year, $gener = [])
     {
         $this->title = $title;
         $this->gener = $gener;
@@ -22,9 +22,9 @@ class Movie {
 
 }
 
-$ghost = new Movie('Ghost', 1980, 'dramatic');
+$ghost = new Movie('Ghost', 1980, ['dramatic', 'thriller', 'noir']);
 
-$scream = new Movie('Scream', 1999, 'commedy');
+$scream = new Movie('Scream', 1999, ['commedy']);
 
 var_dump($ghost);
 ?>
